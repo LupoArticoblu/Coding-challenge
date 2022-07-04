@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+/* inserire l'immagine come background, applicare il layer nero in trasparenza e racchiudervi all'interno: logo, titolo e nav, monopattini con descrizione e stato carica */
+body{
+    background-image: url('background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    position: relative;
+
+}
+
+.layer{
+    background-color: rgba(0, 0, 0, 0.699);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px 0;
+    border-radius: 2%;
+    width: 60%;
+}
+
+header{
+    /* Comprendere il comando flex e i suoi attributi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+img{
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+    /* la proprietà padding ridimensiona contenuto e riadatta il contenitore */
+    padding: 0 20px;
+}
+
+h1{
+    color: rgb(79, 209, 79);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    max-width: 80%;
+    text-align: center; 
+}
+
+#nav{
+    background-color: rgb(79, 209, 79);
+    margin: 0 auto;
+    width: 80%;
+    /* height: 26px; non centra i button */
+    text-align: center;
+    padding: 5px 10px;
+
+}
+
+button{
+    max-width: 200px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: none;
+    /* l'attributo cursor trasforma il cursore del mouse quando viene spostato sull'oggetto */
+    cursor: pointer;
+
+}
+
+.monopattino{
+    text-align: left;
+    max-width: 80%;
+    margin: 20px auto;
+    color: aliceblue;
+
+}
+
+.descrizione{
+    font-size: 16px;
+}
+
+.indirizzo{
+    margin: 15px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.carica {
+    height: 30px;
+    border-radius: 5px;
+    
+}
+
+/* con label come TAG la parte cliccabile del checkbox si estende anche al testo racchiuso nel tag stesso */
+input, label {
+    cursor: pointer; margin-left: 5px;
+}
+
+label h2 {display: inline;}
+
+.stato:after {
+    content: "";
+    display:block;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.pippo:after {
+    background:aquamarine;
+    width: 80%;
+}
+
+.franco:after{
+    background-color:rgb(79, 209, 79); 
+    width: 100%;
+}
+
+.gino::after{
+    background-color: blue;
+    width: 40%;
+}
+
